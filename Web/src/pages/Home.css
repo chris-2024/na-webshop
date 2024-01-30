@@ -1,0 +1,16 @@
+/* Variables available in App.css
+    --background-color
+    --primary-color
+    --text-color
+    --default-padding
+*/
+
+.hero {
+  width: 100%;
+  height: 50vh;
+  background-color: var(--primary-color);
+  background-image: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
