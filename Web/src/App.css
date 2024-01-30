@@ -42,7 +42,7 @@ body {
 .logo {
   justify-self: left;
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 700;
   z-index: 50;
 }
 
@@ -69,6 +69,7 @@ body {
 
 .nav-items ul li {
   display: inline-block;
+  font-weight: 500;
   width: 6rem;
   margin: 0 1rem;
 }
@@ -92,10 +93,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-.content div {
-  display: flex;
-  margin: 0.8rem;
+  flex-wrap: wrap;
 }
 
 .hero {

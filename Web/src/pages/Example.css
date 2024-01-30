@@ -1,0 +1,55 @@
+/* Variables available in App.css */
+/* :root {
+    --background-color: #2c2c2c;
+    --primary-color: #56b280;
+    --text-color: #f0f0f0;
+    --default-padding: 1.2rem 20rem;
+  } */
+
+.box {
+  background-color: var(--primary-color);
+  min-height: 10rem;
+  min-width: 10rem;
+  max-height: 12rem;
+  max-width: 46rem;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.box:hover {
+  min-width: 12rem;
+}
+
+.box-expand:hover {
+  min-height: 12rem;
+}
+
+.box:nth-of-type(2) {
+  background-color: orange;
+}
+
+.box:nth-of-type(3) {
+  background-color: steelblue;
+}
+
+.box:nth-of-type(4) {
+  background-color: maroon;
+}
+
+.box:nth-of-type(5) {
+  background-color: mediumturquoise;
+  flex: 1 0 48%;
+}
+.box:nth-of-type(5):hover {
+  background-color: bisque;
+}
+
+.box:nth-of-type(6) {
+  background-color: purple;
+  flex: 1 0 48%;
+}
+.box:nth-of-type(6):hover {
+  min-width: 100%;
+}
