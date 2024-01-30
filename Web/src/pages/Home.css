@@ -8,8 +8,8 @@
 .hero {
   width: 100%;
   height: 50vh;
+  background: url("") center/cover no-repeat;
   background-color: var(--primary-color);
-  background-image: none;
   display: flex;
   align-items: center;
   justify-content: center;
