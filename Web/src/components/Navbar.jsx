@@ -1,23 +1,32 @@
 import { NavLink } from "react-router-dom";
 
-function NavBar() {
+function NavBar({ isVisible, closeNav }) {
   return (
-    <div className="nav-items">
-      <ul>
-        <li>
-          <NavLink to="/products">Products</NavLink>
-        </li>
-        <li>
-          <NavLink to="/info">Info</NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact">Contact</NavLink>
-        </li>
-        <li>
-          <NavLink to="/example">Example</NavLink>
-        </li>
-      </ul>
-    </div>
+    <ul
+      className={`nav-items ${isVisible ? "show" : ""}`}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <li>
+        <NavLink to="/products" onClick={closeNav}>
+          Products
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/info" onClick={closeNav}>
+          Info
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/contact" onClick={closeNav}>
+          Contact
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/example" onClick={closeNav}>
+          Example
+        </NavLink>
+      </li>
+    </ul>
   );
 }
 

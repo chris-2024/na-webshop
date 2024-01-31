@@ -67,7 +67,7 @@ body {
   transition: color 0.2s;
 }
 
-.nav-items ul li {
+.nav-items li {
   display: inline-block;
   font-weight: 500;
   width: 6rem;
@@ -78,6 +78,7 @@ body {
   justify-self: right;
   display: inline-flex;
   font-size: 1.6rem;
+  z-index: 50;
 }
 
 .container {
@@ -146,14 +147,47 @@ button:focus-visible {
 @media screen and (max-width: 767px) {
   .menu-toggle {
     display: flex;
+    margin-right: auto;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .cart-btn {
+    display: flex;
+    margin-left: auto;
   }
 
   .nav-items {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid gray;
   }
 
   .nav-items.show {
-    display: block;
+    display: flex;
+    padding: 6rem 0 2.4rem 0;
+  }
+
+  .nav-items li {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+  .nav-items a {
+    font-size: 1.4rem;
   }
 }
 
