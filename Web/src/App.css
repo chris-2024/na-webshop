@@ -4,7 +4,7 @@
   --background-color: #2c2c2c;
   --primary-color: #56b280;
   --text-color: #f0f0f0;
-  --default-padding: 1.2rem 20rem;
+  --default-padding: 1.2rem 12rem;
 }
 
 * {
@@ -141,6 +141,18 @@ button:focus-visible {
   }
 }
 
+@media screen and (min-width: 1919px) {
+  :root {
+    --default-padding: 1.2rem 25rem;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  :root {
+    --default-padding: 1.2rem;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .menu-toggle {
     display: flex;
@@ -185,17 +197,5 @@ button:focus-visible {
 
   .nav-items a {
     font-size: 1.4rem;
-  }
-}
-
-@media screen and (max-width: 1439px) {
-  :root {
-    --default-padding: 1.2rem;
-  }
-}
-
-@media screen and (min-width: 1919px) {
-  :root {
-    --default-padding: 1.2rem 30rem;
   }
 }

@@ -8,7 +8,7 @@ function NavBar({ isVisible, closeNav }) {
     >
       <li>
         <NavLink to="/products" onClick={closeNav}>
-          Products
+          Produkter
         </NavLink>
       </li>
       <li>
@@ -18,7 +18,7 @@ function NavBar({ isVisible, closeNav }) {
       </li>
       <li>
         <NavLink to="/contact" onClick={closeNav}>
-          Contact
+          Kontakt
         </NavLink>
       </li>
       <li>
