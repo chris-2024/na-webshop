@@ -65,10 +65,10 @@ function Example() {
             {filteredProducts.map((product) => (
               <ExItem key={product.id} product={product} />
             ))}
-            <div className="box box-expand">Låda</div>
-            <div className="box box-expand">Låda</div>
           </>
         )}
+        <div className="box box-expand">Låda</div>
+        <div className="box box-expand">Låda</div>
       </section>
     </>
   );
