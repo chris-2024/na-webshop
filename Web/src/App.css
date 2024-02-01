@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  list-style-type: none;
 }
 
 body {
@@ -110,10 +111,6 @@ footer {
 a {
   color: var(--text-color);
   cursor: pointer;
-}
-.container a:hover {
-  color: var(--primary-color);
-  transition: color 0.2s;
 }
 
 button {

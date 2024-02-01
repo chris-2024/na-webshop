@@ -6,6 +6,20 @@
     --default-padding: 1.2rem 20rem;
   } */
 
+.categories ul li {
+  display: inline-block;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.categories ul li:hover {
+  color: var(--primary-color);
+}
+
+.active {
+  color: var(--primary-color);
+}
+
 .box {
   background-color: var(--primary-color);
   min-height: 10rem;
@@ -17,13 +31,12 @@
   display: flex;
   transition: 0.3s;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 .box:hover {
-  min-width: 12rem;
-}
-
-.box-expand:hover {
-  min-height: 12rem;
+  min-width: 11rem;
+  color: var(--background-color);
 }
 
 .box:nth-of-type(2) {
@@ -39,17 +52,26 @@
 }
 
 .box:nth-of-type(5) {
-  background-color: mediumturquoise;
-  flex: 1 0 48%;
-}
-.box:nth-of-type(5):hover {
-  background-color: bisque;
+  background-color: teal;
 }
 
 .box:nth-of-type(6) {
+  background-color: yellowgreen;
+}
+
+.box-expand {
+  background-color: mediumturquoise;
+  flex: 1 0 48%;
+}
+.box-expand:hover {
+  background-color: bisque;
+}
+
+.box-expand:nth-of-type(2) {
   background-color: purple;
   flex: 1 0 48%;
 }
-.box:nth-of-type(6):hover {
-  min-width: 100%;
+.box-expand:nth-of-type(2):hover {
+  max-width: 10rem;
+  transition: max-width 1s;
 }
