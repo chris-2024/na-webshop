@@ -20,7 +20,7 @@
   color: var(--primary-color);
 }
 
-.active {
+.categories .active {
   color: var(--primary-color);
 }
 
