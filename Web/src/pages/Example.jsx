@@ -45,7 +45,7 @@ function Example() {
 
   return (
     <>
-      <section className="content categories">
+      <nav className="categories">
         <ul>
           {categories.map((category) => (
             <li key={category}>
@@ -58,7 +58,7 @@ function Example() {
             </li>
           ))}
         </ul>
-      </section>
+      </nav>
       <section className="content">
         {selectedCategory !== null && (
           <>

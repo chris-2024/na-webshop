@@ -6,6 +6,10 @@
     --default-padding: 1.2rem 20rem;
   } */
 
+.categories {
+  margin-top: 2rem;
+}
+
 .categories ul li {
   display: inline-block;
   cursor: pointer;
@@ -74,4 +78,12 @@
 .box-expand:nth-of-type(2):hover {
   max-width: 10rem;
   transition: max-width 1s;
+}
+
+@media screen and (max-width: 479px) {
+  .categories {
+    font-size: 0.8rem;
+    margin: 0.2rem;
+    font-weight: 600;
+  }
 }
