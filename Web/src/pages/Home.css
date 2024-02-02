@@ -1,16 +1,65 @@
-/* Variables available in App.css
+/* 
+    Variables available in App.css
     --background-color
     --primary-color
     --text-color
     --default-padding
+
 */
 
 .hero {
+  color: #fff;
   width: 100%;
-  height: 50vh;
-  background: url("") center/cover no-repeat;
+  height: 67vh;
+  background: url(..\assets\backgrundsbild.jpg) center/cover no-repeat;
   background-color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
+
+}
+
+.rubrik {
+  position: absolute;
+  left: 105px;
+  top: 180px;
+
+
+
+}
+
+.inledning {
+     border: 4cap solid #ccc;
+      padding: 10px;
+      width: 600px; /* Just an example width, adjust as needed */
+      border-radius: 8px;
+      position: absolute;
+      left: 93px;
+      top: 246px;
+      text-align: left;
+
+      
+
+
+}
+
+
+.boxx{
+  min-height: 10rem;
+  min-width: 10rem;
+  max-height: 12rem;
+  max-width: 46rem;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: black;
+  
+
+
+}
+.boxes{
+  display: flex;
 }
