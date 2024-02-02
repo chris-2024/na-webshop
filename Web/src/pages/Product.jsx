@@ -1,13 +1,14 @@
-function Products() {
+import "./Products.css";
+
+function Example() {
   return (
     <>
-      <p>Products Page</p>
+      
       <section className="content">
-        
         
       </section>
     </>
   );
 }
 
-export default Products;
+export default Example;

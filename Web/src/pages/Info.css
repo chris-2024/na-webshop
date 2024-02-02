@@ -1,0 +1,22 @@
+/* info.css */
+
+.info-block {
+  border: 1px solid var(--text-color);
+  padding: 1rem;
+  margin: 1rem;
+  width: 47%;
+  min-height: 30rem;
+}
+
+@media screen and (max-width: 1439px) {
+  .info-block {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 679px) {
+  .info-block {
+    width: 100%;
+    margin: 0.8rem 0;
+  }
+}
