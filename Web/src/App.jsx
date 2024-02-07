@@ -5,7 +5,9 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Info from "./pages/Info";
 import Contact from "./pages/Contact";
+import Product from "./pages/Product";
 
+// prettier-ignore
 function App() {
   return (
     <Router>
@@ -13,9 +15,11 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/products/:categoryId?" element={<Products />} />
           <Route path="/info" element={<Info />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/product/:productId/:productSlug?" element={<Product />}
+          />
         </Routes>
       </div>
       <Footer />
