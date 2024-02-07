@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 import { useCart } from "../context/CartContext.jsx";
 import useFetch from "../hooks/useFetch.jsx";
 import "./product.css";
@@ -46,9 +46,13 @@ function Product() {
             <div className="product-details">
               <h3>{product?.title}</h3>
               <p>{formattedPrice}</p>
-              <button className="buy-button" onClick={addProductToCart}>
+              <NavLink
+                className="buy-button"
+                onClick={addProductToCart}
+                to="/cart"
+              >
                 Lägg i varukorg
-              </button>
+              </NavLink>
             </div>
           </div>
         )}
