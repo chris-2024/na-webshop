@@ -22,7 +22,7 @@ function Contact() {
     <section className="content">
       <div className="contact-block contact-info">
         <img
-          src="/src/assets/contactpicture.jpg.jpg"
+          src="public/contactpicture.jpg.jpg"
           alt="Contactpic"
           width="250"
           height="244"
