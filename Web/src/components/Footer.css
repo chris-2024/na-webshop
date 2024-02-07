@@ -1,0 +1,27 @@
+/* Footer.css*/
+
+.footers {
+  
+  
+  margin: 1rem;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  
+}
+  
+.footers p{
+ margin: 0.8rem;
+ 
+
+}
+
+   
+
+
+
+.copyright{
+ 
+  width: 100%;
+ 
+}
