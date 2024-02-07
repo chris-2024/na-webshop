@@ -21,11 +21,6 @@ function NavBar({ isVisible, closeNav }) {
           Kontakt
         </NavLink>
       </li>
-      <li>
-        <NavLink to="/example" onClick={closeNav}>
-          Example
-        </NavLink>
-      </li>
     </ul>
   );
 }

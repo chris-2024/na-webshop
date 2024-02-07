@@ -41,7 +41,7 @@ function Header() {
         </div>
         <div className="logo">
           <NavLink to="/" end>
-            LOGO
+            Nackatronik
           </NavLink>
         </div>
         <NavBar isVisible={isNavVisible} closeNav={closeNav} />
