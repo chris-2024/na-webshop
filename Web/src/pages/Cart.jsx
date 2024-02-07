@@ -1,6 +1,6 @@
-import "./product.css";
+import "./Cart.css";
 
-function Product() {
+function Cart() {
   return (
     <>
       <section className="content"></section>
@@ -8,4 +8,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default Cart;
