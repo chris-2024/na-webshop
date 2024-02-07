@@ -1,10 +1,13 @@
 function Hero() {
   return (
     <section className="hero">
-      <h1 className="rubrik">Nackatronik</h1>
-            <p className="inledning">Välkommen till Nackatronik <br /> 
-            ditt val för enastående elektronik.
-            Upptäck ett utbud som matchar dina behov </p>
+      <div>
+        <h1 className="hero-title">Nackatronik</h1>
+        <p>
+          Ditt val för enastående elektronik. <br />
+          Upptäck ett utbud som matchar dina behov.
+        </p>
+      </div>
     </section>
   );
 }

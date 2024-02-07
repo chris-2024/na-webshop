@@ -10,56 +10,31 @@
 .hero {
   color: #fff;
   width: 100%;
-  height: 67vh;
-  background: url(..\assets\backgrundsbild.jpg) center/cover no-repeat;
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(..\assets\backgrundsbild.jpg) top/cover no-repeat;
   background-color: var(--primary-color);
   display: flex;
   align-items: center;
-  justify-content: center;
-
+  text-align: left;
+  font-weight: 700;
+}
+.hero div {
+  margin: 0 0 4rem 10rem;
 }
 
-.rubrik {
-  position: absolute;
-  left: 105px;
-  top: 180px;
-
-
-
+.hero-title {
+  margin-bottom: 0.4rem;
 }
 
-.inledning {
-     border: 4cap solid #ccc;
-      padding: 10px;
-      width: 600px; 
-      border-radius: 8px;
-      position: absolute;
-      left: 93px;
-      top: 246px;
-      text-align: left;
-
-      
-
-
-}
-
-
-.boxx{
-  min-height: 10rem;
-  min-width: 10rem;
-  max-height: 12rem;
-  max-width: 46rem;
-  margin: 1rem;
-  padding: 1rem;
-  display: flex;
-  transition: 0.3s;
-  cursor: pointer;
-  font-size: 18px;
-  background-color: black;
-  
-
-
-}
-.boxes{
-  display: flex;
+@media screen and (max-width: 767px) {
+  .hero {
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(..\assets\backgrundsbild.jpg) center/cover no-repeat;
+  }
+  .hero div {
+    margin: 0 0 2rem 0;
+  }
 }

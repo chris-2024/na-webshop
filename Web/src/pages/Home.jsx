@@ -1,29 +1,15 @@
-import Hero from "../components/Hero";
-import "./Home.css";
+import Hero from "../components/hero";
+import "./home.css";
 
 function Home() {
   return (
     <>
       <Hero />
-      <section className="boxxx">
-        <h1>Products</h1>
-        <section className="boxes">
-        <div className="boxx">product</div>
-        <div className="boxx ">product</div>
-        <div className="boxx">product</div>
-        <div className="boxx">product</div>
-       
-      </section>
-      
+      <section className="container">
+        <h2>Utbud</h2>
       </section>
     </>
- 
- 
- 
- 
- );
-        
-    
+  );
 }
 
 export default Home;

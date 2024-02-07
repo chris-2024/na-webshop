@@ -1,22 +1,41 @@
 /* info.css */
 
 .info-block {
-  border: 1px solid var(--text-color);
-  padding: 1rem;
-  margin: 1rem;
-  width: 47%;
-  min-height: 30rem;
+  padding: 2rem;
+  width: 60%;
+  text-align: left;
+  position: relative;
+  margin: 0 auto;
+}
+
+.info-block:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  opacity: 10%;
+  background-color: var(--text-color);
+}
+
+.info-block p {
+  margin-top: 0.6rem;
 }
 
 @media screen and (max-width: 1439px) {
   .info-block {
-    width: 70%;
+    width: 80%;
   }
 }
 
 @media screen and (max-width: 679px) {
   .info-block {
     width: 100%;
-    margin: 0.8rem 0;
+    text-align: center;
+  }
+
+  .info-block:before {
+    display: none;
   }
 }
