@@ -7,24 +7,27 @@ import Info from "./pages/Info";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
+import CartProvider from "./context/CartContext";
 
 // prettier-ignore
 function App() {
   return (
-    <Router>
-      <Header />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products/:categoryId?" element={<Products />} />
-          <Route path="/info" element={<Info />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/product/:productId/:productSlug?" element={<Product />}/>
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </div>
-      <Footer />
-    </Router>
+    <CartProvider>
+      <Router>
+        <Header />
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products/:categoryId?" element={<Products />} />
+            <Route path="/info" element={<Info />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/product/:productId/:productSlug?" element={<Product />}/>
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </div>
+        <Footer />
+      </Router>
+    </CartProvider>
   );
 }
 

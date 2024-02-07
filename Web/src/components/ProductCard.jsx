@@ -6,7 +6,7 @@ const ProductCard = ({ product }) => {
   const slugTitle = slugify(product.title);
 
   const imgSrc =
-    import.meta.env.VITE_BASE_URL + product.img?.data?.attributes?.url || "";
+    import.meta.env.VITE_BASE_URL + product.img?.data?.attributes?.url || null;
 
   const formattedPrice = new Intl.NumberFormat("sv-SE", {
     style: "currency",
@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
     >
       <div className="card-container">
         <div className="image-container">
-          <img src={imgSrc} alt="" />
+          <img src={imgSrc} alt="-" />
         </div>
         <h3>{product.title}</h3>
         <p>{formattedPrice}</p>

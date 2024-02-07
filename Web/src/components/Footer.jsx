@@ -2,8 +2,8 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <footer className="foots">
-      <div className="footers">
+    <footer>
+      {/* <div className="footers">
         <p>
           Nackatronik Huvudkontor <br />
           Tomteboda vägen 3A Sverige <br />
@@ -24,7 +24,7 @@ function Footer() {
           <br />
           Facebook | Twitter | Instagram
         </p>
-      </div>
+      </div> */}
 
       <div className="copyright">
         ©2024 Nackatronik. Alla rättigheter förbehållna.
