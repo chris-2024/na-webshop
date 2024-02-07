@@ -2,9 +2,10 @@
 
 :root {
   --background-color: #2c2c2c;
-  --primary-color: #56b280;
+  /* --primary-color: #56b280; */
+  --primary-color: #2f96c5;
   --text-color: #f0f0f0;
-  --default-padding: 1.2rem 12rem;
+  --default-padding: 1.2rem 10rem;
 }
 
 * {
@@ -59,7 +60,7 @@ body {
   flex: 1;
   text-align: center;
   list-style: none;
-  padding: 0;
+  padding: 0 1.3rem;
   margin: 0;
 }
 
@@ -69,10 +70,11 @@ body {
 }
 
 .nav-items li {
-  display: inline-block;
-  font-weight: 500;
-  width: 6rem;
-  margin: 0 1rem;
+  display: inline-flex;
+  flex: 1;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 0 2rem;
 }
 
 .cart-btn {
@@ -96,6 +98,24 @@ body {
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
+}
+
+.categories {
+  margin-top: 2rem;
+}
+
+.categories ul li {
+  display: inline-block;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.categories ul li:hover {
+  color: var(--primary-color);
+}
+
+.categories .active {
+  color: var(--primary-color);
 }
 
 section {
@@ -136,7 +156,6 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     --background-color: #f0f0f0;
-    --primary-color: #56b280;
     --text-color: #333333;
   }
 }
@@ -147,13 +166,27 @@ button:focus-visible {
   }
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1399px) {
   :root {
     --default-padding: 1.2rem;
+  }
+
+  .topnav {
+    grid-template-columns: 1fr auto auto;
+  }
+
+  .nav-items li {
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin: 0 1.3rem;
   }
 }
 
 @media screen and (max-width: 767px) {
+  .topnav {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
   .menu-toggle {
     display: flex;
     margin-right: auto;
@@ -192,10 +225,17 @@ button:focus-visible {
 
   .nav-items li {
     margin: 1.5rem 0;
-    text-align: center;
   }
 
   .nav-items a {
     font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 619px) {
+  .categories {
+    font-size: 0.8rem;
+    margin: 0.2rem;
+    font-weight: 600;
   }
 }
