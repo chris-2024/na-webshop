@@ -100,6 +100,24 @@ body {
   flex-wrap: wrap;
 }
 
+.categories {
+  margin-top: 2rem;
+}
+
+.categories ul li {
+  display: inline-block;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.categories ul li:hover {
+  color: var(--primary-color);
+}
+
+.categories .active {
+  color: var(--primary-color);
+}
+
 section {
   padding: var(--default-padding);
 }
@@ -211,5 +229,13 @@ button:focus-visible {
 
   .nav-items a {
     font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 619px) {
+  .categories {
+    font-size: 0.8rem;
+    margin: 0.2rem;
+    font-weight: 600;
   }
 }

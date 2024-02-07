@@ -3,7 +3,7 @@ import "./Cart.css";
 function Cart() {
   return (
     <>
-      <section className="content"></section>
+      <section className="content">Cart</section>
     </>
   );
 }

@@ -38,3 +38,15 @@
     margin: 0 0 2rem 0;
   }
 }
+
+.container .categories {
+  margin-top: 2rem;
+}
+
+li a {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+li a:hover {
+  color: var(--primary-color);
+}

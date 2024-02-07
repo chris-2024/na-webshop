@@ -41,7 +41,7 @@ function Products() {
         selectedCategory={selectedCategory}
         onSelectCategory={setSelectedCategory}
       />
-      <section className="content">
+      <section className="content product-list">
         {selectedCategory !== null && (
           <>
             {simplifiedProducts.map((product) => (
