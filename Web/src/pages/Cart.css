@@ -3,6 +3,12 @@
   margin-bottom: 2rem;
 }
 
+.cart-bottom {
+  width: 100%;
+  padding: 4rem;
+  margin-top: 5rem;
+}
+
 .cart-items {
   display: grid;
   gap: 0.4rem;
@@ -44,6 +50,24 @@
   margin-left: 0.5rem;
   transition: border 0.25s;
   min-width: 2rem;
+}
+
+.buy-button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.buy-button:hover {
+  border-color: var(--text-color);
+}
+.buy-button:focus,
+.buy-button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media screen and (max-width: 767px) {

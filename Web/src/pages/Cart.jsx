@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { useCart } from "../context/CartContext.jsx";
 import CartItem from "../components/CartItem.jsx";
 import "./Cart.css";
@@ -17,6 +18,14 @@ function Cart() {
           ))}
         </div>
       )}
+      <div className="cart-bottom">
+      <NavLink
+        className="buy-button"
+        to="/checkout"
+      >
+        Slutför
+      </NavLink>
+      </div>
     </section>
   );
 }

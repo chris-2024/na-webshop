@@ -7,6 +7,7 @@ import Info from "./pages/Info";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 import CartProvider from "./context/CartContext";
 
 // prettier-ignore
@@ -23,6 +24,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/product/:productId/:productSlug?" element={<Product />}/>
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </div>
         <Footer />
