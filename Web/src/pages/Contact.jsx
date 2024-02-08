@@ -17,7 +17,15 @@ function Contact() {
     e.preventDefault();
     console.log("Email:", email);
     console.log("Message:", message);
+
+    // Show alert
+    alert("Skickat");
+
+    // Clear fields
+    setEmail("");
+    setMessage("");
   };
+
   return (
     <section className="content">
       <div className="contact-block contact-info">
