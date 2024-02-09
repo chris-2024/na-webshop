@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import './checkout.css'
+import React, { useState } from "react";
+import "./checkout.css";
 
 const Checkout = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    address: '',
-    postalCode: '',
-    city: '',
-    creditCard: '',
-    expiryDate: '',
-    cvv: '',
+    name: "",
+    email: "",
+    address: "",
+    postalCode: "",
+    city: "",
+    creditCard: "",
+    expiryDate: "",
+    cvv: "",
   });
 
   const handleChange = (e) => {
@@ -23,8 +23,7 @@ const Checkout = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your logic here to process the order with formData
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
   return (
@@ -39,7 +38,7 @@ const Checkout = () => {
           value={formData.name}
           onChange={handleChange}
           required
-        /><br />
+        />
 
         <label htmlFor="email">E-post:</label>
         <input
@@ -49,7 +48,7 @@ const Checkout = () => {
           value={formData.email}
           onChange={handleChange}
           required
-        /><br />
+        />
 
         <label htmlFor="address">Adress:</label>
         <input
@@ -59,7 +58,7 @@ const Checkout = () => {
           value={formData.address}
           onChange={handleChange}
           required
-        /><br />
+        />
 
         <label htmlFor="postalCode">Postnummer:</label>
         <input
@@ -69,7 +68,7 @@ const Checkout = () => {
           value={formData.postalCode}
           onChange={handleChange}
           required
-        /><br />
+        />
 
         <label htmlFor="city">Stad:</label>
         <input
@@ -79,7 +78,7 @@ const Checkout = () => {
           value={formData.city}
           onChange={handleChange}
           required
-        /><br />
+        />
 
         <label htmlFor="creditCard">Kreditkortnummer:</label>
         <input
@@ -89,30 +88,33 @@ const Checkout = () => {
           value={formData.creditCard}
           onChange={handleChange}
           required
-        /><br />
+        />
 
-        <label htmlFor="expiryDate">Utgångsdatum:</label>
-        <input
-          type="text"
-          id="expiryDate"
-          name="expiryDate"
-          placeholder="MM/ÅÅ"
-          value={formData.expiryDate}
-          onChange={handleChange}
-          required
-        /><br />
+        <div>
+          <label htmlFor="expiryDate">Utgångsdatum:</label>
+          <input
+            type="text"
+            id="expiryDate"
+            name="expiryDate"
+            placeholder="MM/ÅÅ"
+            value={formData.expiryDate}
+            onChange={handleChange}
+            required
+          />
 
-        <label htmlFor="cvv">CVV:</label>
-        <input
-          type="text"
-          id="cvv"
-          name="cvv"
-          value={formData.cvv}
-          onChange={handleChange}
-          required
-        /><br />
-
-        <input type="submit" value="Slutför köp" />
+          <label htmlFor="cvv" id="cvv">
+            CVV:
+          </label>
+          <input
+            type="text"
+            id="cvv"
+            name="cvv"
+            value={formData.cvv}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <input type="submit" className="btn" value="Slutför köp" />
       </form>
     </section>
   );

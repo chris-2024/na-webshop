@@ -19,12 +19,9 @@ function Cart() {
         </div>
       )}
       <div className="cart-bottom">
-      <NavLink
-        className="buy-button"
-        to="/checkout"
-      >
-        Slutför
-      </NavLink>
+        <NavLink className="btn" to="/checkout">
+          Slutför
+        </NavLink>
       </div>
     </section>
   );

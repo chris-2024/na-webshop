@@ -46,11 +46,7 @@ function Product() {
             <div className="product-details">
               <h3>{product?.title}</h3>
               <p>{formattedPrice}</p>
-              <NavLink
-                className="buy-button"
-                onClick={addProductToCart}
-                to="/cart"
-              >
+              <NavLink className="btn" onClick={addProductToCart} to="/cart">
                 Lägg i varukorg
               </NavLink>
             </div>
