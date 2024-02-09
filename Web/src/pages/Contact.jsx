@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import "./Contact.css";
 
 function Contact() {
@@ -13,24 +14,44 @@ function Contact() {
     setMessage(e.target.value);
   };
 
+  const sendEmail = async () => {
+    const templateParams = {
+      to_email: "kelolor331@seosnaps.com",
+      message: `Sender's Email: ${email}\n\n${message}`,
+    };
+
+    const emailjsParams = {
+      service_id: "service_w2janni",
+      template_id: "template_3moaedq",
+      user_id: "IuMpLpuJuSnF4d-8G",
+    };
+
+    try {
+      await emailjs.send(
+        emailjsParams.service_id,
+        emailjsParams.template_id,
+        templateParams,
+        emailjsParams.user_id
+      );
+    } catch (error) {
+      console.error("Error sending email:", error);
+    } finally {
+      // Clear fields
+      setEmail("");
+      setMessage("");
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Email:", email);
-    console.log("Message:", message);
-
-    // Show alert
-    alert("Skickat");
-
-    // Clear fields
-    setEmail("");
-    setMessage("");
+    sendEmail();
   };
 
   return (
     <section className="content">
       <div className="contact-block contact-info">
         <img
-          src="public/contactpicture.jpg.jpg"
+          src="public/contactpicture.jpg"
           alt="Contactpic"
           width="250"
           height="244"
