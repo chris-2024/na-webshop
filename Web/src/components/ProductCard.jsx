@@ -23,7 +23,10 @@ const ProductCard = ({ product }) => {
           <img src={imgSrc} alt="-" />
         </div>
         <h3>{product.title}</h3>
-        <p>{formattedPrice}</p>
+        <div className="price-container">
+          <p className="quantity">{`Lager: ${product.quantity}`}</p>
+          <p className="price">{formattedPrice}</p>
+        </div>
       </div>
     </NavLink>
   );

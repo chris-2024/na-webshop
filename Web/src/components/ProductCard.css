@@ -44,8 +44,20 @@
   overflow: hidden;
 }
 
-.card-container p {
-  margin: 0.2rem 0;
+.price-container {
+  display: flex;
+  margin-top: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-container .quantity {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  color: rgb(37, 117, 68);
+}
+
+.price-container .price {
   font-size: 1rem;
   align-self: end;
 }
