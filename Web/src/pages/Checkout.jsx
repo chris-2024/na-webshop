@@ -27,6 +27,8 @@ const Checkout = () => {
   const sendEmailFunc = async () => {
     const templateParams = {
       to_email: formData.email,
+      to_name: formData.name,
+      from_name: "Nackatronik",
       message: "Orderbekräftelse",
     };
 
