@@ -16,6 +16,7 @@ function Contact() {
 
   const sendEmailFunc = async () => {
     const templateParams = {
+      to_email: "kelolor331@seosnaps.com",
       message: `Sender: ${email}\n\n${message}`,
     };
 
