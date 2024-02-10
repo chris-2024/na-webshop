@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
+import Success from "./pages/Success";
 import CartProvider from "./context/CartContext";
 
 // prettier-ignore
@@ -25,6 +26,7 @@ function App() {
             <Route path="/product/:productId/:productSlug?" element={<Product />}/>
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/success" element={<Success />} />
           </Routes>
         </div>
         <Footer />

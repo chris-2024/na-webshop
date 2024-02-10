@@ -3,6 +3,7 @@
 .checkout-page {
   align-items: left;
   text-align: left;
+  max-width: 50rem;
 }
 
 h1 {

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./checkout.css";
 
 const Checkout = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,6 +26,8 @@ const Checkout = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+
+    navigate("/success");
   };
 
   return (
@@ -87,6 +91,8 @@ const Checkout = () => {
           name="creditCard"
           value={formData.creditCard}
           onChange={handleChange}
+          pattern="[0-9]{16}"
+          title="Kreditkortnummer 16-siffror"
           required
         />
 
@@ -99,6 +105,8 @@ const Checkout = () => {
             placeholder="MM/ÅÅ"
             value={formData.expiryDate}
             onChange={handleChange}
+            pattern="(0[1-9]|1[0-2])/(1[2-9]|2[0-9])"
+            title="MM/ÅÅ"
             required
           />
 
@@ -111,6 +119,8 @@ const Checkout = () => {
             name="cvv"
             value={formData.cvv}
             onChange={handleChange}
+            pattern="[0-9]{3}"
+            title="CVV"
             required
           />
         </div>

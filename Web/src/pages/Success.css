@@ -1,0 +1,21 @@
+/* Success.css */
+
+.receipt-items {
+  padding: 1rem;
+}
+
+.receipt-item {
+  display: grid;
+  text-align: left;
+  overflow: hidden;
+  grid-template-columns: 5fr 1fr 1fr;
+}
+
+.receipt-total {
+  width: 100%;
+}
+
+.receipt-item-title {
+  font-size: 0.8rem;
+  margin-right: 1rem;
+}
