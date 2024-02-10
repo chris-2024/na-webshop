@@ -16,12 +16,11 @@ function Contact() {
 
   const sendEmail = async () => {
     const templateParams = {
-      to_email: "kelolor331@seosnaps.com",
       message: `Sender's Email: ${email}\n\n${message}`,
     };
 
     const emailjsParams = {
-      service_id: "service_w2janni",
+      service_id: "service_8ejj2y9",
       template_id: "template_3moaedq",
       user_id: "IuMpLpuJuSnF4d-8G",
     };
@@ -51,7 +50,7 @@ function Contact() {
     <section className="content">
       <div className="contact-block contact-info">
         <img
-          src="public/contactpicture.jpg"
+          src="/contactpicture.jpg"
           alt="Contactpic"
           width="250"
           height="244"
