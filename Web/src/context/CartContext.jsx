@@ -6,7 +6,7 @@ const cartReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART":
       const existingItemIndex = state.cartItems.findIndex(
-        (item) => item.id === action.payload.id
+        (product) => product.id === action.payload.id
       );
 
       if (existingItemIndex !== -1) {
@@ -29,27 +29,37 @@ const cartReducer = (state, action) => {
     case "REMOVE_FROM_CART":
       return {
         ...state,
-        cartItems: state.cartItems.filter((item) => item.id !== action.payload),
+        cartItems: state.cartItems.filter(
+          (product) => product.id !== action.payload
+        ),
       };
 
     case "INCREASE_QUANTITY":
       return {
         ...state,
-        cartItems: state.cartItems.map((item) =>
-          item.id === action.payload
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
+        cartItems: state.cartItems.map((product) =>
+          product.id === action.payload
+            ? { ...product, quantity: product.quantity + 1 }
+            : product
         ),
       };
 
     case "DECREASE_QUANTITY":
       return {
         ...state,
-        cartItems: state.cartItems.map((item) =>
-          item.id === action.payload && item.quantity > 1
-            ? { ...item, quantity: item.quantity - 1 }
-            : item
+        cartItems: state.cartItems.map((product) =>
+          product.id === action.payload && product.quantity > 1
+            ? { ...product, quantity: product.quantity - 1 }
+            : product
         ),
+      };
+
+    case "CALCULATE_TOTAL_COST":
+      return {
+        ...state,
+        totalCost: state.cartItems.reduce((total, product) => {
+          return total + product.quantity * product.price;
+        }, 0),
       };
 
     default:
@@ -60,24 +70,29 @@ const cartReducer = (state, action) => {
 const CartProvider = ({ children }) => {
   const initialState = {
     cartItems: [],
+    totalCost: 0,
   };
 
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
-  const addToCart = (item) => {
-    dispatch({ type: "ADD_TO_CART", payload: item });
+  const addToCart = (product) => {
+    dispatch({ type: "ADD_TO_CART", payload: product });
+    dispatch({ type: "CALCULATE_TOTAL_COST" });
   };
 
-  const removeFromCart = (itemId) => {
-    dispatch({ type: "REMOVE_FROM_CART", payload: itemId });
+  const removeFromCart = (productId) => {
+    dispatch({ type: "REMOVE_FROM_CART", payload: productId });
+    dispatch({ type: "CALCULATE_TOTAL_COST" });
   };
 
-  const increaseQuantity = (itemId) => {
-    dispatch({ type: "INCREASE_QUANTITY", payload: itemId });
+  const increaseQuantity = (productId) => {
+    dispatch({ type: "INCREASE_QUANTITY", payload: productId });
+    dispatch({ type: "CALCULATE_TOTAL_COST" });
   };
 
-  const decreaseQuantity = (itemId) => {
-    dispatch({ type: "DECREASE_QUANTITY", payload: itemId });
+  const decreaseQuantity = (productId) => {
+    dispatch({ type: "DECREASE_QUANTITY", payload: productId });
+    dispatch({ type: "CALCULATE_TOTAL_COST" });
   };
 
   return (

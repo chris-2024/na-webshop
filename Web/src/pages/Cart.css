@@ -1,3 +1,10 @@
+/* cart.css */
+
+.product-cart {
+  display: flex;
+  flex-direction: row;
+}
+
 .product-cart h2 {
   width: 100%;
   margin-bottom: 2rem;
@@ -5,15 +12,17 @@
 
 .cart-bottom {
   width: 100%;
-  padding: 4rem;
-  margin-top: 5rem;
+  padding: 2rem;
 }
-
-/* cart.css */
 
 .cart-items {
   display: grid;
   gap: 0.4rem;
+}
+
+.cart-total {
+  width: 100%;
+  margin-top: 4rem;
 }
 
 .cart-item {
