@@ -105,7 +105,7 @@ const Checkout = () => {
             placeholder="MM/ÅÅ"
             value={formData.expiryDate}
             onChange={handleChange}
-            pattern="(0[1-9]|1[0-2])/(1[2-9]|2[0-9])"
+            pattern="(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})"
             title="MM/ÅÅ"
             required
           />

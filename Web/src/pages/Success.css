@@ -7,6 +7,8 @@
 .receipt-item {
   display: grid;
   text-align: left;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   grid-template-columns: 5fr 1fr 1fr;
 }
