@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import emailjs from "emailjs-com";
+import sendEmail from "../services/emailService";
 import "./checkout.css";
 
 const Checkout = () => {
@@ -24,25 +24,14 @@ const Checkout = () => {
     });
   };
 
-  const sendEmail = async () => {
+  const sendEmailFunc = async () => {
     const templateParams = {
       to_email: formData.email,
       message: "Orderbekräftelse",
     };
 
-    const emailjsParams = {
-      service_id: "service_8ejj2y9",
-      template_id: "template_3moaedq",
-      user_id: "IuMpLpuJuSnF4d-8G",
-    };
-
     try {
-      await emailjs.send(
-        emailjsParams.service_id,
-        emailjsParams.template_id,
-        templateParams,
-        emailjsParams.user_id
-      );
+      await sendEmail(templateParams);
     } catch (error) {
       console.error("Error sending email:", error);
     }
@@ -50,7 +39,7 @@ const Checkout = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendEmail();
+    sendEmailFunc();
     navigate("/success");
   };
 

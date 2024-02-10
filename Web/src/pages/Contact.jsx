@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import sendEmail from "../services/emailService";
 import "./Contact.css";
 
 function Contact() {
@@ -14,24 +14,13 @@ function Contact() {
     setMessage(e.target.value);
   };
 
-  const sendEmail = async () => {
+  const sendEmailFunc = async () => {
     const templateParams = {
-      message: `Sender's Email: ${email}\n\n${message}`,
-    };
-
-    const emailjsParams = {
-      service_id: "service_8ejj2y9",
-      template_id: "template_3moaedq",
-      user_id: "IuMpLpuJuSnF4d-8G",
+      message: `Sender: ${email}\n\n${message}`,
     };
 
     try {
-      await emailjs.send(
-        emailjsParams.service_id,
-        emailjsParams.template_id,
-        templateParams,
-        emailjsParams.user_id
-      );
+      await sendEmail(templateParams);
     } catch (error) {
       console.error("Error sending email:", error);
     } finally {
@@ -43,7 +32,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendEmail();
+    sendEmailFunc();
   };
 
   return (
